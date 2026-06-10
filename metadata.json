@@ -1,0 +1,6 @@
+{
+  "name": "REN Residence Bukit Jalil",
+  "description": "Official-like elegant landing page for REN Residence Bukit Jalil. Rich property information, interactive layout explorer, estimated loan calculator, surrounding amenities, FAQ, and direct developer connection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
