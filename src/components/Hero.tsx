@@ -29,9 +29,9 @@ export default function Hero({ onTourClick }: HeroProps) {
           <span className="text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold block font-sans">
             REN Residence Bukit Jalil &bull; Luxury Family Landmark
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-normal text-white tracking-tight leading-none">
-            We Begin The Home.<br />
-            <span className="text-brand-gold font-normal font-serif italic">You Complete It.</span>
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-serif font-normal text-white tracking-tight leading-none">
+            REN Residence<br />
+            <span className="text-brand-gold font-normal font-serif italic">Bukit Jalil</span>
           </h1>
           <p className="text-base md:text-lg text-slate-200 max-w-2xl font-sans leading-relaxed">
             Welcome to <strong className="text-white font-medium">REN Residence Bukit Jalil</strong>, a prestigious pure domestic residential titled development by Juta Asia Corporation and Gaya Kuasa. Experience a human-centric lifestyle with over 60 multi-generational resort facilities, multi-award-winning architecture, and premium 3 to 4-bedroom layouts from 1,110 sq.ft. to 1,680 sq.ft.

@@ -3,11 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(robots.txt|sitemap.xml|favicon.svg)",
-      "destination": "/$1"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!robots.txt|sitemap.xml|favicon.svg|assets/|api/).*)",
       "destination": "/index.html"
     }
   ],

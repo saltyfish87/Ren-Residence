@@ -51,7 +51,7 @@ export default function Header({ onShowroomClick, onAdminClick }: HeaderProps) {
         >
           <div className="relative w-9 h-9 flex items-center justify-center bg-brand-gold rounded-lg group-hover:scale-105 transition-transform shadow">
             {/* Elegant 人 representation */}
-            <span className="text-lg font-serif text-[#1F2C27] font-semibold tracking-tight">人</span>
+            <span className="text-lg font-serif text-brand-cream font-semibold tracking-tight">人</span>
           </div>
           <div>
             <span className="block font-sans font-bold text-base tracking-wider text-white">
