@@ -322,7 +322,7 @@ export default function LayoutExplorer() {
               {/* Direct Layout Action button (Triggers WhatsApp) */}
               <a
                 id="layout-custom-wa-cta"
-                href={`https://wa.me/60195598932?text=Hi%2C%20I'm%20interested%20in%2520the%2520REN%2520Residence%20Bukit%20Jalil%20-${selectedType.id.toUpperCase().replace('-', ' ')}%20(${selectedType.sqft}%20sqft).%20Please%20send%20me%20early-bird%20rebates%20and%20official%20pricing%20breakdowns.`}
+                href={`https://wa.me/60108278932?text=Hi%2C%20I'm%20interested%20in%2520the%2520REN%2520Residence%20Bukit%20Jalil%20-${selectedType.id.toUpperCase().replace('-', ' ')}%20(${selectedType.sqft}%20sqft).%20Please%20send%20me%20early-bird%20rebates%20and%20official%20pricing%20breakdowns.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 py-3.5 bg-brand-gold hover:bg-brand-gold-light text-[#1F2C27] text-xs font-extrabold rounded-xl shadow-md transition-all uppercase tracking-widest border-none"

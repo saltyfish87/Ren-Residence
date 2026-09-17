@@ -79,7 +79,7 @@ export default function App() {
       <div id="mobile-sticky-action-bar" className="lg:hidden fixed bottom-0 left-0 w-full z-30 bg-brand-green-dark/95 backdrop-blur-md border-t border-brand-green-light/20 p-3 shadow-2xl flex items-center justify-between gap-3 text-white">
         <a
           id="mob-stick-phone"
-          href="tel:+60195598932"
+          href="tel:+60108278932"
           className="flex-1 flex items-center justify-center gap-1.5 py-3 border border-brand-green-light/30 text-white bg-brand-green/20 active:bg-brand-green/40 rounded-xl font-bold text-xs uppercase"
         >
           <Phone size={14} />
@@ -88,7 +88,7 @@ export default function App() {
         
         <a
           id="mob-stick-wa"
-          href="https://wa.me/60195598932?text=Hi%2C%20I'm%20visiting%20the%20REN%20Residence%20landing%20page.%20Please%20send%20me%20special%20early-bird%20pricing%20packages%20and%20brochure."
+          href="https://wa.me/60108278932?text=Hi%2C%20I'm%20visiting%20the%20REN%20Residence%20landing%20page.%20Please%20send%20me%20special%20early-bird%20pricing%20packages%20and%20brochure."
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-1.5 py-3 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-xl font-bold text-xs uppercase shadow-md transition-all whitespace-nowrap"

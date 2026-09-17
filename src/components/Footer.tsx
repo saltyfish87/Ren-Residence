@@ -70,11 +70,11 @@ export default function Footer() {
             <div className="space-y-2.5 text-slate-400 font-sans">
               <div className="flex items-center gap-2">
                 <Phone size={14} className="text-brand-gold" />
-                <span>Contact Hotline: <a href="tel:+60195598932" className="hover:text-brand-gold font-bold hover:underline">019-559 8932</a></span>
+                <span>Contact Hotline: <a href="tel:+60108278932" className="hover:text-brand-gold font-bold hover:underline">010-827 8932</a></span>
               </div>
               <div className="flex items-center gap-2">
                 <MessageSquare size={14} className="text-[#25D366]" />
-                <span>Immediate WhatsApp: <a href="https://wa.me/60195598932" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold font-semibold hover:underline">Chat With Agent</a></span>
+                <span>Immediate WhatsApp: <a href="https://wa.me/60108278932" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold font-semibold hover:underline">Chat With Agent</a></span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-brand-gold" />

@@ -98,16 +98,16 @@ export default function Header({ onShowroomClick, onAdminClick }: HeaderProps) {
         <div className="hidden lg:flex items-center gap-3">
           <a
             id="call-now-hdr-btn"
-            href="tel:+60195598932"
+            href="tel:+60108278932"
             className="flex items-center gap-2 px-3 py-2 text-xs font-bold rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors"
           >
             <Phone size={13} />
-            <span>019-559 8932</span>
+            <span>010-827 8932</span>
           </a>
 
           <a
             id="whatsapp-hdr-btn"
-            href="https://wa.me/60195598932?text=Hi%2C%20I'm%20interested%20in%20REN%20Residence%20Bukit%20Jalil.%20Please%20share%20the%20packages%20and%20brochure."
+            href="https://wa.me/60108278932?text=Hi%2C%20I'm%20interested%20in%20REN%20Residence%20Bukit%20Jalil.%20Please%20share%20the%20packages%20and%20brochure."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white shadow-sm transition-all text-center"
@@ -130,7 +130,7 @@ export default function Header({ onShowroomClick, onAdminClick }: HeaderProps) {
         <div className="lg:hidden flex items-center gap-2">
           <a
             id="mobile-phone-shortcut-btn"
-            href="tel:+60195598932"
+            href="tel:+60108278932"
             className="p-2 rounded-lg border border-white/25 text-white flex items-center justify-center hover:bg-white/15"
           >
             <Phone size={15} />
@@ -172,16 +172,16 @@ export default function Header({ onShowroomClick, onAdminClick }: HeaderProps) {
           <div className="flex flex-col gap-3 pt-3">
             <a
               id="mob-call-btn"
-              href="tel:+60195598932"
+              href="tel:+60108278932"
               className="flex items-center justify-center gap-2 py-3 text-xs font-bold text-slate-100 rounded-lg border border-brand-green-light/40 bg-brand-green/30 active:bg-brand-green/50 transition-all"
             >
               <Phone size={15} />
-              <span>Call: 019-559 8932</span>
+              <span>Call: 010-827 8932</span>
             </a>
 
             <a
               id="mob-wa-btn"
-              href="https://wa.me/60195598932?text=Hi%2C%20I'm%20interested%20in%20REN%20Residence%20Bukit%20Jalil.%20Please%20share%20the%20packages%20and%20brochure."
+              href="https://wa.me/60108278932?text=Hi%2C%20I'm%20interested%20in%20REN%20Residence%20Bukit%20Jalil.%20Please%20share%20the%20packages%20and%20brochure."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 py-3 text-xs font-bold bg-[#25D366] hover:bg-[#20ba59] text-white rounded-lg shadow-md transition-all font-sans"

@@ -154,7 +154,7 @@ export default function Facilities() {
               </div>
               <a
                 id="facilities-whatsapp-btn"
-                href="https://wa.me/60195598932?text=Hi%2C%20Please%20share%20the%20complete%20PDF%20e-brochure%20with%20all%2060%2B%20facilities%20plan%20and%20site%20layout%20of%20REN%20Residence%20Bukit%20Jalil."
+                href="https://wa.me/60108278932?text=Hi%2C%20Please%20share%20the%20complete%20PDF%20e-brochure%20with%20all%2060%2B%20facilities%20plan%20and%20site%20layout%20of%20REN%20Residence%20Bukit%20Jalil."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 lg:p-3.5 bg-[#25D366] hover:scale-105 rounded-full text-white shadow-lg transition-transform flex items-center justify-center cursor-pointer border-none shrink-0 self-end sm:self-center"
