@@ -1,19 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap');
 @import "tailwindcss";
 
+/* Same register as the CloutHaus site (user-pinned reference): bone ground, charcoal ink, one bronze, thin warm frames. */
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-mono: "Space Mono", ui-monospace, monospace;
-  
-  --color-brand-green: #1C2722;
-  --color-brand-green-dark: #101915;
-  --color-brand-green-light: #2D3D37;
-  --color-brand-gold: #C2A478;
-  --color-brand-gold-dark: #A68759;
-  --color-brand-gold-light: #DFCDAB;
-  --color-brand-cream: #FAF8F5;
-  --color-brand-sage: #EBEDE9;
-  --color-brand-sand: #F4EFEB;
+  --font-display: "Marcellus", "Optima", Georgia, serif;
+  --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bone: #f5f4f1;
+  --color-panel: #ffffff;
+  --color-ink: #282828;
+  --color-soft: #6b6b6b;
+  --color-mute: #9a9a96;
+  --color-frame: #e3e0da;
+  --color-bronze: #ba9765;
+  --color-bronze-deep: #9d7c4d;
+  --color-charcoal: #282828;
+  --color-charcoal-2: #1f1f1f;
+
+  /* legacy aliases */
+  --color-luxury-gold: #ba9765;
+  --color-warm-white: #f5f4f1;
+  --color-luxury-black: #282828;
 }
 
+@layer base {
+  html { scroll-behavior: smooth; background-color: #f5f4f1; color: #282828; }
+  body { font-family: var(--font-body); font-weight: 300; -webkit-font-smoothing: antialiased; }
+  ::selection { background-color: #ba9765; color: #ffffff; }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f5f4f1; }
+  ::-webkit-scrollbar-thumb { background: #e3e0da; border: 2px solid #f5f4f1; }
+  ::-webkit-scrollbar-thumb:hover { background: #ba9765; }
+  :focus-visible { outline: 1px solid #ba9765; outline-offset: 3px; }
+  input, textarea, select { caret-color: #ba9765; }
+}
+
+@utility display { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.14em; line-height: 1.2; font-weight: 400; }
+@utility caps { font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.24em; font-size: 11px; font-weight: 500; }
+@utility frame { border: 1px solid #e3e0da; background: #ffffff; padding: 10px; }
+@utility tabular { font-variant-numeric: tabular-nums; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+.rise { animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+@media (prefers-reduced-motion: reduce) { .rise { animation-duration: 0.01s; } }
+
+/* Hero still, drifting very slowly in place of a film. */
+@keyframes drift { from { transform: scale(1.04) translate3d(0, 0, 0); } to { transform: scale(1.12) translate3d(-1.5%, -1%, 0); } }
+.drift { animation: drift 28s ease-in-out infinite alternate; will-change: transform; }
+@media (prefers-reduced-motion: reduce) { .drift { animation: none; } }

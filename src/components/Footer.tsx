@@ -1,101 +1,36 @@
-import React, { useState } from 'react';
-import { ShieldCheck, MessageSquare, Phone, Mail, Building, Key, MapPin } from 'lucide-react';
-import PDPA_Modal from './PDPA_Modal';
+import { AGENT_CONTACT } from '../data';
+import { PROJECT } from '../data/facts';
 
-export default function Footer() {
-  const [pdpaOpen, setPdpaOpen] = useState(false);
+const LOGO = 'https://lh3.googleusercontent.com/d/1DEI8SZwy7r-QIn1AQPaGgzPV4ZM49Uzv=w400';
+const LEGAL = [['/terms', 'Terms & Conditions'], ['/privacy', 'Privacy Policy'], ['/disclaimer', 'Disclaimer']];
 
+export default function Footer({ onAgentDesk }: { onAgentDesk?: () => void }) {
   return (
-    <footer id="footer-legal" className="bg-brand-green-dark text-slate-350 font-sans text-xs pt-16 pb-8 border-t border-brand-green-light/20 scroll-mt-10">
-      <div className="max-w-7xl mx-auto px-6 space-y-12 animate-fadeIn">
-        
-        {/* Upper Column Links */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start border-b border-brand-green-light/15 pb-12">
-          
-          {/* Column 1: Brand */}
-          <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 flex items-center justify-center bg-brand-gold rounded shadow">
-                <span className="text-base font-serif text-[#1F2C27] font-semibold">人</span>
-              </div>
-              <div>
-                <span className="block text-sm font-bold text-white tracking-wider">REN RESIDENCE BUKIT JALIL</span>
-                <span className="block text-[9px] text-brand-gold font-bold uppercase tracking-widest font-mono">Authorized VIP Agency Channel</span>
-              </div>
-            </div>
-            <p className="text-slate-400 text-[11px] leading-relaxed max-w-sm font-sans">
-              An independent marketing channel managed directly by authorized elite project coordinators (authorized under IQI Realty Sdn Bhd). Handled in strict compliance with Malaysian real estate advertising policies.
-            </p>
+    <footer className="bg-charcoal px-6 py-16 text-bone md:px-12">
+      <div className="mx-auto max-w-[1400px]">
+        <div className="grid grid-cols-1 gap-10 border-b border-bone/15 pb-12 md:grid-cols-3">
+          <div>
+            <p className="display text-[15px] tracking-[0.3em]">Ren Residence</p>
+            <p className="mt-4 text-[12.5px] leading-[1.8] text-bone/60">{PROJECT.address}<br />{PROJECT.developer} · {PROJECT.architect}</p>
           </div>
-
-          {/* Column 2: Quick Links */}
-          <div className="md:col-span-3 space-y-3">
-            <span className="block text-white font-bold text-xs uppercase tracking-wider font-mono">Privacy Policies</span>
-            <ul className="space-y-2 font-sans">
-              <li>
-                <button 
-                  id="foot-pdpa-link"
-                  onClick={() => setPdpaOpen(true)}
-                  className="hover:text-brand-gold text-left cursor-pointer bg-transparent border-none text-slate-400 hover:underline p-0"
-                >
-                  Personal Data Consent (PDPA)
-                </button>
-              </li>
-              <li>
-                <a 
-                  id="foot-terms-link"
-                  href="#" 
-                  onClick={(e) => { e.preventDefault(); setPdpaOpen(true); }}
-                  className="hover:text-brand-gold text-slate-400 hover:underline"
-                >
-                  Website Terms of Use
-                </a>
-              </li>
-              <li>
-                <a 
-                  id="foot-ad-compliance-link"
-                  href="#" 
-                  onClick={(e) => { e.preventDefault(); alert("Security Policy Guaranteed: This verified agency portal operates under high-grade SSL encryption and stores customer records safely in a client-consented database with zero trackers."); }}
-                  className="hover:text-brand-gold text-slate-400 hover:underline"
-                >
-                  Certified Trust Agreement
-                </a>
-              </li>
-            </ul>
+          <div>
+            <p className="caps text-bronze">Marketed by</p>
+            <p className="mt-4 text-[12.5px] leading-[1.8] text-bone/80">{AGENT_CONTACT.name} · {AGENT_CONTACT.ren}<br />{AGENT_CONTACT.agency} {AGENT_CONTACT.agencyCode}<br />{AGENT_CONTACT.phoneDisplay} · {AGENT_CONTACT.email}</p>
           </div>
-
-          {/* Column 3: Contacts */}
-          <div className="md:col-span-4 space-y-3">
-            <span className="block text-white font-bold text-xs uppercase tracking-wider font-mono">Project Marketing Desk</span>
-            <div className="space-y-2.5 text-slate-400 font-sans">
-              <div className="flex items-center gap-2">
-                <Phone size={14} className="text-brand-gold" />
-                <span>Contact Hotline: <a href="tel:+60108278932" className="hover:text-brand-gold font-bold hover:underline">010-827 8932</a></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MessageSquare size={14} className="text-[#25D366]" />
-                <span>Immediate WhatsApp: <a href="https://wa.me/60108278932" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold font-semibold hover:underline">Chat With Agent</a></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail size={14} className="text-brand-gold" />
-                <span>Broker Representative: <span className="text-slate-300 font-semibold">IQI Realty Sdn Bhd</span></span>
-              </div>
-            </div>
+          <div className="flex flex-col items-start gap-4 md:items-end">
+            <div className="bg-bone px-4 py-3"><img src={LOGO} alt="IQI Realty Sdn Bhd" className="h-10 w-auto object-contain" referrerPolicy="no-referrer" /></div>
+            <nav className="flex flex-wrap gap-x-5 gap-y-2 text-[12px] text-bone/60">
+              {LEGAL.map(([href, label]) => <a key={href} href={href} className="transition-colors hover:text-bone">{label}</a>)}
+              {onAgentDesk && <button type="button" onClick={onAgentDesk} className="transition-colors hover:text-bone">Agent desk</button>}
+            </nav>
           </div>
         </div>
-
-
-
-        {/* Copyright and signature */}
-        <div className="flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-4 pt-4 border-t border-brand-green-light/15 font-sans">
-          <span>&copy; 2026 Gaya Kuasa Sdn Bhd &amp; Juta Asia Corporation. All rights reserved.</span>
-          <span className="font-mono text-[10px] text-brand-gold/60">Property Safety Audit: Guaranteed APDL Compliant</span>
+        <div className="mt-8 flex flex-col gap-3 text-[11.5px] leading-[1.8] text-bone/45">
+          <p>This website is managed by an authorised real estate negotiator for marketing purposes and is not the developer's official website. It is a real estate advertisement, not a contract of sale, financial advice or an investment guarantee.</p>
+          <p>Renders are artist's impressions from the developer's sales kit and may differ from the completed development. Layouts, specifications, unit count and facilities are subject to change by the developer and the relevant authorities. Prices are stated as a starting price only.</p>
+          <p>&copy; {new Date().getFullYear()} {AGENT_CONTACT.name}, {AGENT_CONTACT.agency}.</p>
         </div>
-
       </div>
-
-      {/* Render terms modally */}
-      <PDPA_Modal isOpen={pdpaOpen} onClose={() => setPdpaOpen(false)} />
     </footer>
   );
 }

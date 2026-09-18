@@ -1,60 +1,26 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { DRIVE_IMAGES } from '../constants';
+import { IMG, PROJECT, drive } from '../data/facts';
+import { AGENT_CONTACT } from '../data';
 
-interface HeroProps {
-  onTourClick: () => void;
-}
+const wa = encodeURIComponent(`Hi ${AGENT_CONTACT.name}, I'd like to arrange a private viewing of Ren Residence, Bukit Jalil.`);
 
-export default function Hero({ onTourClick }: HeroProps) {
+/**
+ * Full-bleed night aerial render from the developer's sales kit, drifting very slowly (the developer has no film for this
+ * project). Reduced-motion users get the still. Same charcoal band and type as the CloutHaus hero.
+ */
+export default function Hero() {
   return (
-    <section id="overview" className="relative min-h-[90vh] md:h-screen flex items-center justify-center overflow-hidden bg-brand-green-dark text-white">
-      {/* Background Graphic Image with layout overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={DRIVE_IMAGES.facade}
-          alt="REN Residence Twin Towers Elegant Architecture"
-          className="w-full h-full object-cover scale-101 animate-[subtleZoom_40s_infinite_alternate]"
-          referrerPolicy="no-referrer"
-        />
-        {/* Soft, luxury ambient dark green and charcoal overlay gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-green-dark/95 via-brand-green/65 to-brand-green-dark/30"></div>
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-brand-green-dark to-transparent"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col justify-center py-20 md:py-28 h-full">
-
-        {/* Main Content Area */}
-        <div className="max-w-3xl space-y-7">
-          <span className="text-xs uppercase tracking-[0.2em] font-semibold text-brand-gold block font-sans">
-            REN Residence Bukit Jalil &bull; Luxury Family Landmark
-          </span>
-          <h1 className="text-5xl md:text-6xl lg:text-8xl font-serif font-normal text-white tracking-tight leading-none">
-            REN Residence<br />
-            <span className="text-brand-gold font-normal font-serif italic">Bukit Jalil</span>
-          </h1>
-          <p className="text-base md:text-lg text-slate-200 max-w-2xl font-sans leading-relaxed">
-            Welcome to <strong className="text-white font-medium">REN Residence Bukit Jalil</strong>, a prestigious pure domestic residential titled development by Juta Asia Corporation and Gaya Kuasa. Experience a human-centric lifestyle with over 60 multi-generational resort facilities, multi-award-winning architecture, and premium 3 to 4-bedroom layouts from 1,110 sq.ft. to 1,680 sq.ft.
-          </p>
-          <div className="pt-2">
-            <button
-              id="hero-book-now-btn"
-              onClick={onTourClick}
-              className="flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-gold hover:bg-brand-gold-light text-brand-green-dark font-extrabold text-xs uppercase tracking-wider rounded-lg shadow-[0_4px_20px_rgba(194,164,120,0.2)] hover:shadow-[0_4px_25px_rgba(194,164,120,0.4)] transition-all group cursor-pointer border-none"
-            >
-              <span>Secure Early-Bird Package</span>
-              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
+    <section id="top" className="relative h-[100svh] min-h-[620px] w-full overflow-hidden bg-charcoal text-bone">
+      <img src={drive(IMG.aerial_night, 1920)} alt="" aria-hidden fetchPriority="high" referrerPolicy="no-referrer" className="drift absolute inset-0 h-full w-full object-cover object-[50%_40%]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(40,40,40,0.35)_0%,rgba(40,40,40,0.05)_40%,rgba(40,40,40,0.6)_100%)]" />
+      <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
+        <p style={{ animationDelay: '0.2s' }} className="rise caps text-bronze">{PROJECT.name} · {PROJECT.area}, Kuala Lumpur</p>
+        <h1 style={{ animationDelay: '0.35s' }} className="rise mt-5 max-w-3xl display text-[26px] leading-[1.22] text-bone md:text-[38px] lg:text-[44px]">A home shaped like the character for people</h1>
+        <p style={{ animationDelay: '0.5s' }} className="rise mt-6 max-w-md text-[13.5px] leading-[1.85] text-bone/75">Twin 52-storey towers by {PROJECT.developer}, designed by {PROJECT.architect}. Family layouts of {PROJECT.builtUpMin} to {PROJECT.builtUpMax.toLocaleString()} sq ft. From {PROJECT.priceFrom}.</p>
+        <div style={{ animationDelay: '0.65s' }} className="rise mt-9 flex flex-wrap items-center gap-8">
+          <a href={`https://wa.me/${AGENT_CONTACT.phone}?text=${wa}`} target="_blank" rel="noopener noreferrer" className="caps border-b border-bronze pb-1 text-bone transition-colors hover:text-bronze">Book a private viewing →</a>
+          <a href="#address" className="caps text-bone/60 transition-colors hover:text-bone">Explore the address</a>
         </div>
       </div>
-
-      <style>{`
-        @keyframes subtleZoom {
-          0% { transform: scale(1.01); }
-          100% { transform: scale(1.06); }
-        }
-      `}</style>
     </section>
   );
 }
