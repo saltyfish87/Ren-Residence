@@ -18,7 +18,8 @@ export default function Design() {
           </Reveal>
         </div>
         <Reveal delay={0.1} className="lg:col-span-7">
-          <div className="frame"><SafeImg src={drive(IMG.facade_dusk, 1800)} alt="Ren Residence facade at dusk, architectural render" className="aspect-[4/5] w-full object-cover md:aspect-[16/10] md:object-[50%_30%]" /></div>
+          {/* The dusk render is a 4:5 portrait; the frame keeps that ratio so nothing is cropped. */}
+          <div className="frame mx-auto w-full max-w-[560px] lg:ml-auto"><SafeImg src={drive(IMG.facade_dusk, 1800)} alt="Ren Residence facade at dusk, architectural render" className="aspect-[4/5] w-full object-cover" /></div>
         </Reveal>
       </div>
     </section>
