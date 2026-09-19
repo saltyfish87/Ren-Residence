@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://renresidence.my/sitemap.xml
+Sitemap: https://www.jutaasia-renresidence.com/sitemap.xml
