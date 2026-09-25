@@ -29,6 +29,7 @@ export default function Footer({ onAgentDesk }: { onAgentDesk?: () => void }) {
           <p>This website is managed by an authorised real estate negotiator for marketing purposes and is not the developer's official website. It is a real estate advertisement, not a contract of sale, financial advice or an investment guarantee.</p>
           <p>Renders are artist's impressions from the developer's sales kit and may differ from the completed development. Layouts, specifications, unit count and facilities are subject to change by the developer and the relevant authorities. Prices are stated as a starting price only.</p>
           <p>&copy; {new Date().getFullYear()} {AGENT_CONTACT.name}, {AGENT_CONTACT.agency}.</p>
+          <p className="mt-2">Also listed on <a href="https://www.propertyportal.my/project/ren-bukit-jalil" className="underline">propertyportal.my: Ren Residence</a> · <a href="https://www.propertyportal.my/" className="underline">all Kuala Lumpur new launches</a>.</p>
         </div>
       </div>
     </footer>
