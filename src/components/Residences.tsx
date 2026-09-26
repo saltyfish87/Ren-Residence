@@ -36,9 +36,7 @@ export default function Residences() {
                 <tr className="border-b border-frame"><td className="py-3 pr-4 text-soft">Car park</td><td className="tabular py-3 text-right font-display text-[15px] text-ink">{PROJECT.carPark.replace(' per unit', '')}</td></tr>
               </tbody>
             </table>
-            <p className="caps mt-8 text-mute">Starting from</p>
-            <p className="mt-2 font-display text-[22px] text-ink">{PROJECT.priceFrom}</p>
-            <p className="mt-1 text-[12px] text-mute">Current price list on request. Prices are set by the developer and may change.</p>
+            <p className="mt-8 text-[12px] text-mute">Current price list on request. Prices are set by the developer and may change.</p>
             <a href={`https://wa.me/${AGENT_CONTACT.phone}?text=${wa}`} target="_blank" rel="noopener noreferrer" className="caps mt-8 inline-block border-b border-bronze pb-1 text-ink transition-colors hover:text-bronze">Ask about this plan →</a>
           </div>
         </motion.div>

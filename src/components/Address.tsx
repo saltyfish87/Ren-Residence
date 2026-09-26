@@ -6,7 +6,7 @@ import { Heading, Body } from './Heading';
 export default function Address() {
   const facts: [string, string][] = [
     ['Tenure', PROJECT.tenure], ['Storeys', String(PROJECT.storeys)], ['Residences', PROJECT.totalUnits.toLocaleString()], ['Land', PROJECT.landSize],
-    ['Built-up', `${PROJECT.builtUpMin} – ${PROJECT.builtUpMax.toLocaleString()} sq ft`], ['Starting from', PROJECT.priceFrom], ['Completion', String(PROJECT.completionYear)], ['Maintenance', PROJECT.maintenance],
+    ['Built-up', `${PROJECT.builtUpMin} – ${PROJECT.builtUpMax.toLocaleString()} sq ft`], ['Completion', String(PROJECT.completionYear)],
   ];
   return (
     <section id="address" className="bg-bone px-6 py-24 md:px-12 md:py-36">

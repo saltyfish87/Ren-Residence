@@ -53,9 +53,9 @@ export const PROJECT = {
   builtUpMax: 1680,
   bedrooms: "3 - 4+1",
   bathrooms: "2 - 3",
-  priceFrom: "RM 537,000",
-  priceFromNumber: 537000,
-  maintenance: "RM0.35 psf",
+  priceFrom: "",
+  priceFromNumber: 0,
+  maintenance: "",
   carPark: "2 – 3 bays per unit"
 } as const;
 
@@ -201,10 +201,10 @@ export const DISTANCES: Record<string, string> = {
 export const FAQ = [
   { q: "Is Ren Residence a residential or commercial title?", a: "Residential title. Utilities are billed at domestic rates and there is no commercial podium traffic, which many families prefer." },
   { q: "Is Ren Residence freehold or leasehold?", a: "Leasehold, on an elevated 5.6-acre site in Bukit Jalil." },
-  { q: "What is the starting price?", a: "From RM 537,000. Ask for the current price list; prices are set by the developer and may change." },
+  { q: "How do I get the current prices?", a: "Prices are set by the developer and may change. Ask us for the current price list." },
   { q: "What layouts and sizes are available?", a: "Six layouts from 920 to 1,680 sq ft: Type A (3 bedrooms), Types B1, B2 and B3 (3 + 1 bedrooms) and Types C and D (4 + 1 bedrooms, 3 bathrooms). Twin 52-storey towers hold 1,260 units, 16 units per floor, each tower served by 5 + 1 lifts." },
   { q: "When will Ren Residence be completed?", a: "The developer's target is 2027; the project is under construction." },
-  { q: "What facilities are there, and what is the maintenance fee?", a: "Over an acre of facilities: an infinity pool, children's pools and play areas, basketball, tennis / futsal and badminton courts, a gym, yoga room, sauna and steam rooms, co-working room, function rooms, a kindergarten and childcare centre, jogging track and gardens. The maintenance fee is RM 0.35 per sq ft." },
+  { q: "What facilities are there?", a: "Over an acre of facilities: an infinity pool, children's pools and play areas, basketball, tennis / futsal and badminton courts, a gym, yoga room, sauna and steam rooms, co-working room, function rooms, a kindergarten and childcare centre, jogging track and gardens." },
   { q: "How is the location for getting around?", a: "Alam Sutera LRT station is about 500 m away and Pavilion Bukit Jalil about 1.8 km (a 3-minute drive), with the KESAS, Bukit Jalil, KL–Seremban and Sungai Besi expressways nearby. Tzu Chi International School, IMU and Kingsgate International School are minutes away." },
   { q: "Who is the developer and the architect?", a: "Developed by Gaya Kuasa Sdn Bhd and designed by GDP Architects, whose '人'-shaped twin towers are planned for sunlight, ventilation and privacy between neighbours." },
   { q: "How do I arrange a viewing or get the floor plans?", a: "WhatsApp Yee Woei Shyan (REN 46305, IQI Realty Sdn Bhd) at +60 10-827 8932, or use the registration form on this page." }

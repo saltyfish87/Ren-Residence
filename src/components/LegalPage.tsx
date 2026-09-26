@@ -3,7 +3,7 @@ import { LEGAL } from '../legal';
 import { AGENT_CONTACT } from '../data';
 
 const LOGO = 'https://lh3.googleusercontent.com/d/1DEI8SZwy7r-QIn1AQPaGgzPV4ZM49Uzv=w400';
-const HOME_TITLE = 'Ren Residence Bukit Jalil | Leasehold Family Residences by Gaya Kuasa, from RM 537,000';
+const HOME_TITLE = 'Ren Residence Bukit Jalil | Family Residences by Gaya Kuasa';
 
 export function LegalPage({ slug }: { slug: 'terms' | 'privacy' | 'disclaimer' }) {
   const doc = LEGAL.find((d) => d.slug === slug)!;

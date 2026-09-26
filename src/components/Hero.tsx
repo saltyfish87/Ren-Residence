@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
         <p style={{ animationDelay: '0.2s' }} className="rise caps text-bronze">{PROJECT.name} · {PROJECT.area}, Kuala Lumpur</p>
         <h1 style={{ animationDelay: '0.35s' }} className="rise mt-5 max-w-3xl display text-[26px] leading-[1.22] text-bone md:text-[38px] lg:text-[44px]">A home shaped like the character for people</h1>
-        <p style={{ animationDelay: '0.5s' }} className="rise mt-6 max-w-md text-[13.5px] leading-[1.85] text-bone/75">Twin 52-storey towers by {PROJECT.developer}, designed by {PROJECT.architect}. Family layouts of {PROJECT.builtUpMin} to {PROJECT.builtUpMax.toLocaleString()} sq ft. From {PROJECT.priceFrom}.</p>
+        <p style={{ animationDelay: '0.5s' }} className="rise mt-6 max-w-md text-[13.5px] leading-[1.85] text-bone/75">Twin 52-storey towers by {PROJECT.developer}, designed by {PROJECT.architect}. Family layouts of {PROJECT.builtUpMin} to {PROJECT.builtUpMax.toLocaleString()} sq ft.</p>
         <div style={{ animationDelay: '0.65s' }} className="rise mt-9 flex flex-wrap items-center gap-8">
           <a href={`https://wa.me/${AGENT_CONTACT.phone}?text=${wa}`} target="_blank" rel="noopener noreferrer" className="caps border-b border-bronze pb-1 text-bone transition-colors hover:text-bronze">Book a private viewing →</a>
           <a href="#address" className="caps text-bone/60 transition-colors hover:text-bone">Explore the address</a>
